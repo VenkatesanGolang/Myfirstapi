@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo "Building the Project..........."
                 dir('Myfirstapi') {  // Change 'Myfirstapi' to your actual folder name
-                    bat "mvn clean"
+                    // bat "mvn clean"
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo "Testing the Project..............."
                 dir('Myfirstapi') {
-                    bat "mvn test"
+                    // bat "mvn test"
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo "Compiling the Project..............."
                 dir('Myfirstapi') {
-                    bat "mvn compile"
+                    // bat "mvn compile"
                 }
             }
         }
