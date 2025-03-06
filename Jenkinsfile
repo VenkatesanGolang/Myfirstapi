@@ -4,21 +4,27 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building the Project..........."
-                bat "mvn clean"
+                dir('Myfirstapi') {  // Change 'Myfirstapi' to your actual folder name
+                    bat "mvn clean"
+                }
             }
         }
         stage('Test') {
             steps {
                 echo "Testing the Project..............."
-                bat "mvn test"
+                dir('Myfirstapi') {
+                    bat "mvn test"
+                }
             }
         }
-        stage('Compile'){
+        stage('Compile') {
             steps {
-                echo "Compile the Project..............."
-                bat "mvn compile"
+                echo "Compiling the Project..............."
+                dir('Myfirstapi') {
+                    bat "mvn compile"
+                }
+            }
         }
-     }
         stage('Deploy') {
             steps {
                 echo "Deploying the Project..............."
